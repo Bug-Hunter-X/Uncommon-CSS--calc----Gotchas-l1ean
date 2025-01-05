@@ -1,0 +1,20 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 500px;
+}
+
+.item {
+  flex: 1;
+  background-color: lightblue;  /* Ensure this is visible */
+  margin: 5px;
+  /* Corrected calc() usage: */
+  width: calc( (100% - 30px) / 3 ); /* Added parentheses and spaces */
+}
+
+/* Example of handling unit incompatibility.  Using em for flexible sizing. */
+.flexible-item {
+  width: calc( 20em - 10px ); /* Subtract pixels from ems. Works well if em is properly set on parent */
+}
+
+/* For a more robust approach, consider using vh/vw, or similar for percentages  dependent on viewport size.  */
